@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Gridset Demo</title>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+<!-- Gridset CSS -->
+<!--[if (!IE) | (gt IE 9)]><!--><link rel="stylesheet" href="./css/gridset.css" /><!--<![endif]-->
+<!--[if IE 9]><link rel="stylesheet" href="./css/gridset-ie-9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="./css/gridset-ie-lte8.css" /><![endif]-->
+
+<!-- Totally unnecessary demo styles - REMOVE FOR YOUR USE -->
+<style type="text/css">
+
+	/* simple reset */
+		html, body, p, div, div {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+	
+		body {
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+			color: #333;
+			background: #f8f8f7;
+			text-align: center;
+			padding-top: 40px;
+			line-height: 1;
+		}
+	
+		.wrapper {
+			margin: 0 auto;
+			width: 90%;
+			float: none;
+			padding-top: 2.5em;
+		}
+		
+		div {
+			float: left;
+			width: 100%;
+			margin-bottom: 40px;
+			display: block;
+			position: relative;
+			*zoom: 1;
+		}
+		
+		div > h1 {
+			margin: -2.5em 0 2em;
+			font-size: 24px;
+			padding-top: 0.5em;
+		}
+	
+		.box {
+			border: 1px solid #99999a;
+			margin-bottom: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			position: relative;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			*left: -1px;
+		}
+		
+		.box p {
+			margin: 0;
+			font-size: 15px;
+		}
+		
+		.box[class*=pad] {
+			background: #99999a;
+			padding-top: 0;
+			padding-bottom: 0;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+		
+		.box[class*=padin] {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		.box[class*=pad] p {
+			background: #f8f8f7;
+			outline: none;
+			padding: 10px 0;
+		}
+		
+		div {
+			display: none;
+		}
+		
+		.section {
+			margin-bottom: 4em;
+			padding-top: 1em;
+		}
+		
+		.wrapper {
+			display: block;
+		}
+		
+		/* IE 7 only styles */
+		
+		.gs-ie7clear {
+			display: block;
+			width: 100%;
+			border: none;
+			background: none;
+			float: left;
+			clear: both;
+			height: 0;
+			margin: 0 0 0 100%;
+			visibility: hidden;
+		}
+
+</style>
+
+</head>
+<body>
+	
+	<div class="wrapper">
+	
+		<div class="section cp-show cp-showgrid">
+
+			<h1>3-col</h1>
+
+			<!-- class examples -->
+			<div class="cp1 box"><p>cp1</p></div>
+			<div class="cp2 box"><p>cp2</p></div>
+			<div class="cp3 box"><p>cp3</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cp-all box"><p>cp-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cp1 cp-padin box"><p>cp1 cp-padin</p></div>
+			<div class="cp3 cp-pad box"><p>cp3 cp-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cp1 cp-padinfull box"><p>cp1 cp-padinfull</p></div>
+			<div class="cp3 cp-padfull box"><p>cp3 cp-padfull</p></div>
+
+		</div><!-- end 3-col -->
+
+		<div class="section co-show co-showgrid">
+
+			<h1>4-col</h1>
+
+			<!-- class examples -->
+			<div class="co1 box"><p>co1</p></div>
+			<div class="co2 box"><p>co2</p></div>
+			<div class="co3 box"><p>co3</p></div>
+			<div class="co4 box"><p>co4</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="co1-co2 box"><p>co1-co2</p></div>
+			<div class="co3-co4 box"><p>co3-co4</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="co-all box"><p>co-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="co1 co-padin box"><p>co1 co-padin</p></div>
+			<div class="co4 co-pad box"><p>co4 co-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="co1 co-padinfull box"><p>co1 co-padinfull</p></div>
+			<div class="co4 co-padfull box"><p>co4 co-padfull</p></div>
+
+		</div><!-- end 4-col -->
+
+		<div class="section cb-show cb-showgrid">
+
+			<h1>5-col</h1>
+
+			<!-- class examples -->
+			<div class="cb1 box"><p>cb1</p></div>
+			<div class="cb2 box"><p>cb2</p></div>
+			<div class="cb3 box"><p>cb3</p></div>
+			<div class="cb4 box"><p>cb4</p></div>
+			<div class="cb5 box"><p>cb5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cb1-cb2 box"><p>cb1-cb2</p></div>
+			<div class="cb3-cb5 box"><p>cb3-cb5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cb-all box"><p>cb-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cb1 cb-padin box"><p>cb1 cb-padin</p></div>
+			<div class="cb5 cb-pad box"><p>cb5 cb-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cb1 cb-padinfull box"><p>cb1 cb-padinfull</p></div>
+			<div class="cb5 cb-padfull box"><p>cb5 cb-padfull</p></div>
+
+		</div><!-- end 5-col -->
+
+		<div class="section cc-show cc-showgrid">
+
+			<h1>6-col</h1>
+
+			<!-- class examples -->
+			<div class="cc1 box"><p>cc1</p></div>
+			<div class="cc2 box"><p>cc2</p></div>
+			<div class="cc3 box"><p>cc3</p></div>
+			<div class="cc4 box"><p>cc4</p></div>
+			<div class="cc5 box"><p>cc5</p></div>
+			<div class="cc6 box"><p>cc6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cc1-cc3 box"><p>cc1-cc3</p></div>
+			<div class="cc4-cc6 box"><p>cc4-cc6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cc-all box"><p>cc-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cc1 cc-padin box"><p>cc1 cc-padin</p></div>
+			<div class="cc6 cc-pad box"><p>cc6 cc-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cc1 cc-padinfull box"><p>cc1 cc-padinfull</p></div>
+			<div class="cc6 cc-padfull box"><p>cc6 cc-padfull</p></div>
+
+		</div><!-- end 6-col -->
+
+		<div class="section c-show c-showgrid">
+
+			<h1>8-col</h1>
+
+			<!-- class examples -->
+			<div class="c1 box"><p>c1</p></div>
+			<div class="c2 box"><p>c2</p></div>
+			<div class="c3 box"><p>c3</p></div>
+			<div class="c4 box"><p>c4</p></div>
+			<div class="c5 box"><p>c5</p></div>
+			<div class="c6 box"><p>c6</p></div>
+			<div class="c7 box"><p>c7</p></div>
+			<div class="c8 box"><p>c8</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="c1-c4 box"><p>c1-c4</p></div>
+			<div class="c5-c8 box"><p>c5-c8</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="c-all box"><p>c-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="c1 c-padin box"><p>c1 c-padin</p></div>
+			<div class="c8 c-pad box"><p>c8 c-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="c1 c-padinfull box"><p>c1 c-padinfull</p></div>
+			<div class="c8 c-padfull box"><p>c8 c-padfull</p></div>
+
+		</div><!-- end 8-col -->
+
+		<div class="section cd-show cd-showgrid">
+
+			<h1>10-col</h1>
+
+			<!-- class examples -->
+			<div class="cd1 box"><p>cd1</p></div>
+			<div class="cd2 box"><p>cd2</p></div>
+			<div class="cd3 box"><p>cd3</p></div>
+			<div class="cd4 box"><p>cd4</p></div>
+			<div class="cd5 box"><p>cd5</p></div>
+			<div class="cd6 box"><p>cd6</p></div>
+			<div class="cd7 box"><p>cd7</p></div>
+			<div class="cd8 box"><p>cd8</p></div>
+			<div class="cd9 box"><p>cd9</p></div>
+			<div class="cd10 box"><p>cd10</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cd1-cd5 box"><p>cd1-cd5</p></div>
+			<div class="cd6-cd10 box"><p>cd6-cd10</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cd-all box"><p>cd-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cd1 cd-padin box"><p>cd1 cd-padin</p></div>
+			<div class="cd10 cd-pad box"><p>cd10 cd-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cd1 cd-padinfull box"><p>cd1 cd-padinfull</p></div>
+			<div class="cd10 cd-padfull box"><p>cd10 cd-padfull</p></div>
+
+		</div><!-- end 10-col -->
+
+		<div class="section g-show g-showgrid">
+
+			<h1>Golden-3-col-a</h1>
+
+			<!-- class examples -->
+			<div class="g1 box"><p>g1</p></div>
+			<div class="g2 box"><p>g2</p></div>
+			<div class="g3 box"><p>g3</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="g-all box"><p>g-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="g1 g-padin box"><p>g1 g-padin</p></div>
+			<div class="g3 g-pad box"><p>g3 g-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="g1 g-padinfull box"><p>g1 g-padinfull</p></div>
+			<div class="g3 g-padfull box"><p>g3 g-padfull</p></div>
+
+		</div><!-- end Golden-3-col-a -->
+
+		<div class="section gb-show gb-showgrid">
+
+			<h1>Golden-3-col-b</h1>
+
+			<!-- class examples -->
+			<div class="gb1 box"><p>gb1</p></div>
+			<div class="gb2 box"><p>gb2</p></div>
+			<div class="gb3 box"><p>gb3</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="gb-all box"><p>gb-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="gb1 gb-padin box"><p>gb1 gb-padin</p></div>
+			<div class="gb3 gb-pad box"><p>gb3 gb-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="gb1 gb-padinfull box"><p>gb1 gb-padinfull</p></div>
+			<div class="gb3 gb-padfull box"><p>gb3 gb-padfull</p></div>
+
+		</div><!-- end Golden-3-col-b -->
+
+		<div class="section gc-show gc-showgrid">
+
+			<h1>Golden-3-col-c</h1>
+
+			<!-- class examples -->
+			<div class="gc1 box"><p>gc1</p></div>
+			<div class="gc2 box"><p>gc2</p></div>
+			<div class="gc3 box"><p>gc3</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="gc-all box"><p>gc-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="gc1 gc-padin box"><p>gc1 gc-padin</p></div>
+			<div class="gc3 gc-pad box"><p>gc3 gc-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="gc1 gc-padinfull box"><p>gc1 gc-padinfull</p></div>
+			<div class="gc3 gc-padfull box"><p>gc3 gc-padfull</p></div>
+
+		</div><!-- end Golden-3-col-c -->
+
+		<div class="section ch-show ch-showgrid">
+
+			<h1>5-col-biauron</h1>
+
+			<!-- class examples -->
+			<div class="ch1 box"><p>ch1</p></div>
+			<div class="ch2 box"><p>ch2</p></div>
+			<div class="ch3 box"><p>ch3</p></div>
+			<div class="ch4 box"><p>ch4</p></div>
+			<div class="ch5 box"><p>ch5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="ch1-ch2 box"><p>ch1-ch2</p></div>
+			<div class="ch3-ch5 box"><p>ch3-ch5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="ch-all box"><p>ch-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="ch1 ch-padin box"><p>ch1 ch-padin</p></div>
+			<div class="ch5 ch-pad box"><p>ch5 ch-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="ch1 ch-padinfull box"><p>ch1 ch-padinfull</p></div>
+			<div class="ch5 ch-padfull box"><p>ch5 ch-padfull</p></div>
+
+		</div><!-- end 5-col-biauron -->
+
+		<div class="section ck-show ck-showgrid">
+
+			<h1>5-col-bipenton</h1>
+
+			<!-- class examples -->
+			<div class="ck1 box"><p>ck1</p></div>
+			<div class="ck2 box"><p>ck2</p></div>
+			<div class="ck3 box"><p>ck3</p></div>
+			<div class="ck4 box"><p>ck4</p></div>
+			<div class="ck5 box"><p>ck5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="ck1-ck2 box"><p>ck1-ck2</p></div>
+			<div class="ck3-ck5 box"><p>ck3-ck5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="ck-all box"><p>ck-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="ck1 ck-padin box"><p>ck1 ck-padin</p></div>
+			<div class="ck5 ck-pad box"><p>ck5 ck-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="ck1 ck-padinfull box"><p>ck1 ck-padinfull</p></div>
+			<div class="ck5 ck-padfull box"><p>ck5 ck-padfull</p></div>
+
+		</div><!-- end 5-col-bipenton -->
+
+		<div class="section cj-show cj-showgrid">
+
+			<h1>5-col-diagon</h1>
+
+			<!-- class examples -->
+			<div class="cj1 box"><p>cj1</p></div>
+			<div class="cj2 box"><p>cj2</p></div>
+			<div class="cj3 box"><p>cj3</p></div>
+			<div class="cj4 box"><p>cj4</p></div>
+			<div class="cj5 box"><p>cj5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cj1-cj2 box"><p>cj1-cj2</p></div>
+			<div class="cj3-cj5 box"><p>cj3-cj5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cj-all box"><p>cj-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cj1 cj-padin box"><p>cj1 cj-padin</p></div>
+			<div class="cj5 cj-pad box"><p>cj5 cj-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cj1 cj-padinfull box"><p>cj1 cj-padinfull</p></div>
+			<div class="cj5 cj-padfull box"><p>cj5 cj-padfull</p></div>
+
+		</div><!-- end 5-col-diagon -->
+
+		<div class="section cm-show cm-showgrid">
+
+			<h1>5-col-golden</h1>
+
+			<!-- class examples -->
+			<div class="cm1 box"><p>cm1</p></div>
+			<div class="cm2 box"><p>cm2</p></div>
+			<div class="cm3 box"><p>cm3</p></div>
+			<div class="cm4 box"><p>cm4</p></div>
+			<div class="cm5 box"><p>cm5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cm1-cm2 box"><p>cm1-cm2</p></div>
+			<div class="cm3-cm5 box"><p>cm3-cm5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cm-all box"><p>cm-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cm1 cm-padin box"><p>cm1 cm-padin</p></div>
+			<div class="cm5 cm-pad box"><p>cm5 cm-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cm1 cm-padinfull box"><p>cm1 cm-padinfull</p></div>
+			<div class="cm5 cm-padfull box"><p>cm5 cm-padfull</p></div>
+
+		</div><!-- end 5-col-golden -->
+
+		<div class="section cn-show cn-showgrid">
+
+			<h1>5-col-hecton</h1>
+
+			<!-- class examples -->
+			<div class="cn1 box"><p>cn1</p></div>
+			<div class="cn2 box"><p>cn2</p></div>
+			<div class="cn3 box"><p>cn3</p></div>
+			<div class="cn4 box"><p>cn4</p></div>
+			<div class="cn5 box"><p>cn5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cn1-cn2 box"><p>cn1-cn2</p></div>
+			<div class="cn3-cn5 box"><p>cn3-cn5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cn-all box"><p>cn-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cn1 cn-padin box"><p>cn1 cn-padin</p></div>
+			<div class="cn5 cn-pad box"><p>cn5 cn-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cn1 cn-padinfull box"><p>cn1 cn-padinfull</p></div>
+			<div class="cn5 cn-padfull box"><p>cn5 cn-padfull</p></div>
+
+		</div><!-- end 5-col-hecton -->
+
+		<div class="section ce-show ce-showgrid">
+
+			<h1>5-col-hermidiagon</h1>
+
+			<!-- class examples -->
+			<div class="ce1 box"><p>ce1</p></div>
+			<div class="ce2 box"><p>ce2</p></div>
+			<div class="ce3 box"><p>ce3</p></div>
+			<div class="ce4 box"><p>ce4</p></div>
+			<div class="ce5 box"><p>ce5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="ce1-ce2 box"><p>ce1-ce2</p></div>
+			<div class="ce3-ce5 box"><p>ce3-ce5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="ce-all box"><p>ce-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="ce1 ce-padin box"><p>ce1 ce-padin</p></div>
+			<div class="ce5 ce-pad box"><p>ce5 ce-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="ce1 ce-padinfull box"><p>ce1 ce-padinfull</p></div>
+			<div class="ce5 ce-padfull box"><p>ce5 ce-padfull</p></div>
+
+		</div><!-- end 5-col-hermidiagon -->
+
+		<div class="section cl-show cl-showgrid">
+
+			<h1>5-col-hermiolon</h1>
+
+			<!-- class examples -->
+			<div class="cl1 box"><p>cl1</p></div>
+			<div class="cl2 box"><p>cl2</p></div>
+			<div class="cl3 box"><p>cl3</p></div>
+			<div class="cl4 box"><p>cl4</p></div>
+			<div class="cl5 box"><p>cl5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cl1-cl2 box"><p>cl1-cl2</p></div>
+			<div class="cl3-cl5 box"><p>cl3-cl5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cl-all box"><p>cl-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cl1 cl-padin box"><p>cl1 cl-padin</p></div>
+			<div class="cl5 cl-pad box"><p>cl5 cl-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cl1 cl-padinfull box"><p>cl1 cl-padinfull</p></div>
+			<div class="cl5 cl-padfull box"><p>cl5 cl-padfull</p></div>
+
+		</div><!-- end 5-col-hermiolon -->
+
+		<div class="section ci-show ci-showgrid">
+
+			<h1>5-col-penton</h1>
+
+			<!-- class examples -->
+			<div class="ci1 box"><p>ci1</p></div>
+			<div class="ci2 box"><p>ci2</p></div>
+			<div class="ci3 box"><p>ci3</p></div>
+			<div class="ci4 box"><p>ci4</p></div>
+			<div class="ci5 box"><p>ci5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="ci1-ci2 box"><p>ci1-ci2</p></div>
+			<div class="ci3-ci5 box"><p>ci3-ci5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="ci-all box"><p>ci-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="ci1 ci-padin box"><p>ci1 ci-padin</p></div>
+			<div class="ci5 ci-pad box"><p>ci5 ci-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="ci1 ci-padinfull box"><p>ci1 ci-padinfull</p></div>
+			<div class="ci5 ci-padfull box"><p>ci5 ci-padfull</p></div>
+
+		</div><!-- end 5-col-penton -->
+
+		<div class="section cg-show cg-showgrid">
+
+			<h1>5-col-quadriagon</h1>
+
+			<!-- class examples -->
+			<div class="cg1 box"><p>cg1</p></div>
+			<div class="cg2 box"><p>cg2</p></div>
+			<div class="cg3 box"><p>cg3</p></div>
+			<div class="cg4 box"><p>cg4</p></div>
+			<div class="cg5 box"><p>cg5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cg1-cg2 box"><p>cg1-cg2</p></div>
+			<div class="cg3-cg5 box"><p>cg3-cg5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cg-all box"><p>cg-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cg1 cg-padin box"><p>cg1 cg-padin</p></div>
+			<div class="cg5 cg-pad box"><p>cg5 cg-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cg1 cg-padinfull box"><p>cg1 cg-padinfull</p></div>
+			<div class="cg5 cg-padfull box"><p>cg5 cg-padfull</p></div>
+
+		</div><!-- end 5-col-quadriagon -->
+
+		<div class="section cf-show cf-showgrid">
+
+			<h1>5-col-trion</h1>
+
+			<!-- class examples -->
+			<div class="cf1 box"><p>cf1</p></div>
+			<div class="cf2 box"><p>cf2</p></div>
+			<div class="cf3 box"><p>cf3</p></div>
+			<div class="cf4 box"><p>cf4</p></div>
+			<div class="cf5 box"><p>cf5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="cf1-cf2 box"><p>cf1-cf2</p></div>
+			<div class="cf3-cf5 box"><p>cf3-cf5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="cf-all box"><p>cf-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="cf1 cf-padin box"><p>cf1 cf-padin</p></div>
+			<div class="cf5 cf-pad box"><p>cf5 cf-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="cf1 cf-padinfull box"><p>cf1 cf-padinfull</p></div>
+			<div class="cf5 cf-padfull box"><p>cf5 cf-padfull</p></div>
+
+		</div><!-- end 5-col-trion -->
+
+
+		
+	</div>
+	
+	<!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
+	<script src="https://get.gridsetapp.com/38054/overlay/"></script>	
+
+</body>
+</html>

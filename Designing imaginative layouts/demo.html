@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Gridset Demo</title>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+<link rel="stylesheet" href="./css/gridset.css" />
+
+<!-- Totally unnecessary demo styles - REMOVE FOR YOUR USE -->
+<style type="text/css">
+
+	/* simple reset */
+		html, body, p, div, div {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+	
+		body {
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+			color: #333;
+			background: #f8f8f7;
+			text-align: center;
+			padding-top: 40px;
+			line-height: 1;
+		}
+	
+		.wrapper {
+			margin: 0 auto;
+			width: 90%;
+			float: none;
+			padding-top: 2.5em;
+		}
+		
+		div {
+			float: left;
+			width: 100%;
+			margin-bottom: 40px;
+			display: block;
+			position: relative;
+			*zoom: 1;
+		}
+		
+		div > h1 {
+			margin: -2.5em 0 2em;
+			font-size: 24px;
+			padding-top: 0.5em;
+		}
+	
+		.box {
+			border: 1px solid #99999a;
+			margin-bottom: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			position: relative;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			*left: -1px;
+		}
+		
+		.box p {
+			margin: 0;
+			font-size: 15px;
+		}
+		
+		.box[class*=pad] {
+			background: #99999a;
+			padding-top: 0;
+			padding-bottom: 0;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+		
+		.box[class*=padin] {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		.box[class*=pad] p {
+			background: #f8f8f7;
+			outline: none;
+			padding: 10px 0;
+		}
+		
+		div {
+			display: none;
+		}
+		
+		.section {
+			margin-bottom: 4em;
+			padding-top: 1em;
+		}
+		
+		.wrapper {
+			display: block;
+		}
+		
+		/* IE 7 only styles */
+		
+		.gs-ie7clear {
+			display: block;
+			width: 100%;
+			border: none;
+			background: none;
+			float: left;
+			clear: both;
+			height: 0;
+			margin: 0 0 0 100%;
+			visibility: hidden;
+		}
+
+</style>
+
+</head>
+<body>
+	
+	<div class="wrapper">
+	
+		<div class="section h-show h-showgrid">
+
+			<h1>Hemiolon</h1>
+
+			<!-- class examples -->
+			<div class="h1 box"><p>h1</p></div>
+			<div class="h2 box"><p>h2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="h-all box"><p>h-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="h1 h-padin box"><p>h1 h-padin</p></div>
+			<div class="h2 h-pad box"><p>h2 h-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="h1 h-padinfull box"><p>h1 h-padinfull</p></div>
+			<div class="h2 h-padfull box"><p>h2 h-padfull</p></div>
+
+		</div><!-- end Hemiolon -->
+
+		<div class="section hb-show hb-showgrid">
+
+			<h1>Hecton</h1>
+
+			<!-- class examples -->
+			<div class="hb1 box"><p>hb1</p></div>
+			<div class="hb2 box"><p>hb2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="hb-all box"><p>hb-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="hb1 hb-padin box"><p>hb1 hb-padin</p></div>
+			<div class="hb2 hb-pad box"><p>hb2 hb-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="hb1 hb-padinfull box"><p>hb1 hb-padinfull</p></div>
+			<div class="hb2 hb-padfull box"><p>hb2 hb-padfull</p></div>
+
+		</div><!-- end Hecton -->
+
+		<div class="section b-show b-showgrid">
+
+			<h1>Bipenton</h1>
+
+			<!-- class examples -->
+			<div class="b1 box"><p>b1</p></div>
+			<div class="b2 box"><p>b2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="b-all box"><p>b-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="b1 b-padin box"><p>b1 b-padin</p></div>
+			<div class="b2 b-pad box"><p>b2 b-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="b1 b-padinfull box"><p>b1 b-padinfull</p></div>
+			<div class="b2 b-padfull box"><p>b2 b-padfull</p></div>
+
+		</div><!-- end Bipenton -->
+
+		<div class="section d-show d-showgrid">
+
+			<h1>Diagon</h1>
+
+			<!-- class examples -->
+			<div class="d1 box"><p>d1</p></div>
+			<div class="d2 box"><p>d2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="d-all box"><p>d-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="d1 d-padin box"><p>d1 d-padin</p></div>
+			<div class="d2 d-pad box"><p>d2 d-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="d1 d-padinfull box"><p>d1 d-padinfull</p></div>
+			<div class="d2 d-padfull box"><p>d2 d-padfull</p></div>
+
+		</div><!-- end Diagon -->
+
+		<div class="section p-show p-showgrid">
+
+			<h1>Penton</h1>
+
+			<!-- class examples -->
+			<div class="p1 box"><p>p1</p></div>
+			<div class="p2 box"><p>p2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="p-all box"><p>p-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="p1 p-padin box"><p>p1 p-padin</p></div>
+			<div class="p2 p-pad box"><p>p2 p-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="p1 p-padinfull box"><p>p1 p-padinfull</p></div>
+			<div class="p2 p-padfull box"><p>p2 p-padfull</p></div>
+
+		</div><!-- end Penton -->
+
+		<div class="section bb-show bb-showgrid">
+
+			<h1>Biauron</h1>
+
+			<!-- class examples -->
+			<div class="bb1 box"><p>bb1</p></div>
+			<div class="bb2 box"><p>bb2</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="bb-all box"><p>bb-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="bb1 bb-padin box"><p>bb1 bb-padin</p></div>
+			<div class="bb2 bb-pad box"><p>bb2 bb-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="bb1 bb-padinfull box"><p>bb1 bb-padinfull</p></div>
+			<div class="bb2 bb-padfull box"><p>bb2 bb-padfull</p></div>
+
+		</div><!-- end Biauron -->
+
+		<div class="section c-show c-showgrid">
+
+			<h1>5-col</h1>
+
+			<!-- class examples -->
+			<div class="c1 box"><p>c1</p></div>
+			<div class="c2 box"><p>c2</p></div>
+			<div class="c3 box"><p>c3</p></div>
+			<div class="c4 box"><p>c4</p></div>
+			<div class="c5 box"><p>c5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="c1-c2 box"><p>c1-c2</p></div>
+			<div class="c3-c5 box"><p>c3-c5</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="c-all box"><p>c-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="c1 c-padin box"><p>c1 c-padin</p></div>
+			<div class="c5 c-pad box"><p>c5 c-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="c1 c-padinfull box"><p>c1 c-padinfull</p></div>
+			<div class="c5 c-padfull box"><p>c5 c-padfull</p></div>
+
+		</div><!-- end 5-col -->
+
+		<div class="section wwf-show wwf-showgrid">
+
+			<h1>wwf</h1>
+
+			<!-- class examples -->
+			<div class="wwf1 box"><p>wwf1</p></div>
+			<div class="wwf2 box"><p>wwf2</p></div>
+			<div class="wwf3 box"><p>wwf3</p></div>
+			<div class="wwf4 box"><p>wwf4</p></div>
+			<div class="wwf5 box"><p>wwf5</p></div>
+			<div class="wwf6 box"><p>wwf6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="wwf1-wwf3 box"><p>wwf1-wwf3</p></div>
+			<div class="wwf4-wwf6 box"><p>wwf4-wwf6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="wwf-all box"><p>wwf-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="wwf1 wwf-padin box"><p>wwf1 wwf-padin</p></div>
+			<div class="wwf6 wwf-pad box"><p>wwf6 wwf-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="wwf1 wwf-padinfull box"><p>wwf1 wwf-padinfull</p></div>
+			<div class="wwf6 wwf-padfull box"><p>wwf6 wwf-padfull</p></div>
+
+		</div><!-- end wwf -->
+
+		<div class="section db-show db-showgrid">
+
+			<h1>demo</h1>
+
+			<!-- class examples -->
+			<div class="db1 box"><p>db1</p></div>
+			<div class="db2 box"><p>db2</p></div>
+			<div class="db3 box"><p>db3</p></div>
+			<div class="db4 box"><p>db4</p></div>
+			<div class="db5 box"><p>db5</p></div>
+			<div class="db6 box"><p>db6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="db1-db3 box"><p>db1-db3</p></div>
+			<div class="db4-db6 box"><p>db4-db6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="db-all box"><p>db-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="db1 db-padin box"><p>db1 db-padin</p></div>
+			<div class="db6 db-pad box"><p>db6 db-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="db1 db-padinfull box"><p>db1 db-padinfull</p></div>
+			<div class="db6 db-padfull box"><p>db6 db-padfull</p></div>
+
+		</div><!-- end demo -->
+
+
+		
+	</div>
+	
+	<!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
+	<script src="https://get.gridsetapp.com/35735/overlay/"></script>	
+
+</body>
+</html>

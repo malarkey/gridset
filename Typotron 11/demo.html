@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Gridset Demo</title>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+<!-- Gridset CSS -->
+<!--[if (!IE) | (gt IE 8)]><!--><link rel="stylesheet" href="./css/gridset.css" /><!--<![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="./css/gridset-ie-lte8.css" /><![endif]-->
+
+<!-- Totally unnecessary demo styles - REMOVE FOR YOUR USE -->
+<style type="text/css">
+
+	/* simple reset */
+		html, body, p, div, div {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+	
+		body {
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+			color: #333;
+			background: #f8f8f7;
+			text-align: center;
+			padding-top: 40px;
+			line-height: 1;
+		}
+	
+		.wrapper {
+			margin: 0 auto;
+			width: 90%;
+			float: none;
+			padding-top: 2.5em;
+		}
+		
+		div {
+			float: left;
+			width: 100%;
+			margin-bottom: 40px;
+			display: block;
+			position: relative;
+			*zoom: 1;
+		}
+		
+		div > h1 {
+			margin: -2.5em 0 2em;
+			font-size: 24px;
+			padding-top: 0.5em;
+		}
+	
+		.box {
+			border: 1px solid #99999a;
+			margin-bottom: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			position: relative;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			*left: -1px;
+		}
+		
+		.box p {
+			margin: 0;
+			font-size: 15px;
+		}
+		
+		.box[class*=pad] {
+			background: #99999a;
+			padding-top: 0;
+			padding-bottom: 0;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+		
+		.box[class*=padin] {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		.box[class*=pad] p {
+			background: #f8f8f7;
+			outline: none;
+			padding: 10px 0;
+		}
+		
+		div {
+			display: none;
+		}
+		
+		.section {
+			margin-bottom: 4em;
+			padding-top: 1em;
+		}
+		
+		.wrapper {
+			display: block;
+		}
+		
+		/* IE 7 only styles */
+		
+		.gs-ie7clear {
+			display: block;
+			width: 100%;
+			border: none;
+			background: none;
+			float: left;
+			clear: both;
+			height: 0;
+			margin: 0 0 0 100%;
+			visibility: hidden;
+		}
+
+</style>
+
+</head>
+<body>
+	
+	<div class="wrapper">
+	
+		<div class="section sv-show sv-showgrid">
+
+			<h1>Seven</h1>
+
+			<!-- class examples -->
+			<div class="sv1 box"><p>sv1</p></div>
+			<div class="sv2 box"><p>sv2</p></div>
+			<div class="sv3 box"><p>sv3</p></div>
+			<div class="sv4 box"><p>sv4</p></div>
+			<div class="sv5 box"><p>sv5</p></div>
+			<div class="sv6 box"><p>sv6</p></div>
+			<div class="sv7 box"><p>sv7</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="sv1-sv3 box"><p>sv1-sv3</p></div>
+			<div class="sv4-sv7 box"><p>sv4-sv7</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="sv-all box"><p>sv-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="sv1 sv-padin box"><p>sv1 sv-padin</p></div>
+			<div class="sv7 sv-pad box"><p>sv7 sv-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="sv1 sv-padinfull box"><p>sv1 sv-padinfull</p></div>
+			<div class="sv7 sv-padfull box"><p>sv7 sv-padfull</p></div>
+
+		</div><!-- end Seven -->
+
+		<div class="section e-show e-showgrid">
+
+			<h1>Eight</h1>
+
+			<!-- class examples -->
+			<div class="e1 box"><p>e1</p></div>
+			<div class="e2 box"><p>e2</p></div>
+			<div class="e3 box"><p>e3</p></div>
+			<div class="e4 box"><p>e4</p></div>
+			<div class="e5 box"><p>e5</p></div>
+			<div class="e6 box"><p>e6</p></div>
+			<div class="e7 box"><p>e7</p></div>
+			<div class="e8 box"><p>e8</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="e1-e4 box"><p>e1-e4</p></div>
+			<div class="e5-e8 box"><p>e5-e8</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="e-all box"><p>e-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="e1 e-padin box"><p>e1 e-padin</p></div>
+			<div class="e8 e-pad box"><p>e8 e-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="e1 e-padinfull box"><p>e1 e-padinfull</p></div>
+			<div class="e8 e-padfull box"><p>e8 e-padfull</p></div>
+
+		</div><!-- end Eight -->
+
+		<div class="section sx-show sx-showgrid">
+
+			<h1>Six</h1>
+
+			<!-- class examples -->
+			<div class="sx1 box"><p>sx1</p></div>
+			<div class="sx2 box"><p>sx2</p></div>
+			<div class="sx3 box"><p>sx3</p></div>
+			<div class="sx4 box"><p>sx4</p></div>
+			<div class="sx5 box"><p>sx5</p></div>
+			<div class="sx6 box"><p>sx6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- column span examples -->
+			<div class="sx1-sx3 box"><p>sx1-sx3</p></div>
+			<div class="sx4-sx6 box"><p>sx4-sx6</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- full width example -->
+			<div class="sx-all box"><p>sx-all</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+
+			<!-- padding examples -->
+			<div class="sx1 sx-padin box"><p>sx1 sx-padin</p></div>
+			<div class="sx6 sx-pad box"><p>sx6 sx-pad</p></div>
+
+			<!--[if lte IE 7]><hr class="gs-ie7clear" /><![endif]-->
+			<div class="sx1 sx-padinfull box"><p>sx1 sx-padinfull</p></div>
+			<div class="sx6 sx-padfull box"><p>sx6 sx-padfull</p></div>
+
+		</div><!-- end Six -->
+
+
+		
+	</div>
+	
+	<!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
+	<script src="https://get.gridsetapp.com/38056/overlay/"></script>	
+
+</body>
+</html>
